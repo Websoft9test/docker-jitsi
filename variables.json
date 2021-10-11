@@ -1,7 +1,7 @@
 {
-  "name": "template",
-  "trademark": "ONLYOFFICE",
-  "installpath": "/data/wwwroot/onlyoffice",
+  "name": "jitsi",
+  "trademark": "Jitsi",
+  "installpath": "/data/wwwroot/jitsi",
   "compose_file": "docker-compose-production.yml",
   "env_file": ".env_all",
   "requirements":{
@@ -10,7 +10,7 @@
     "memory": "4",
     "disk": "20",
     "swap": "2",
-    "url": "https://github.com/onlyoffice/docker#recommended-system-requirements"
+    "url": "https://github.com/jitsi/docker#recommended-system-requirements"
   },
 
   "user": {
@@ -20,9 +20,9 @@
 
   "services":[
     {
-      "name": "onlyoffice-server",
+      "name": "jitsi-server",
       "port": "9002",
-      "description_cn": "浏览器访问 ONLYOFFICE",
+      "description_cn": "浏览器访问 Jitsi",
       "description_en": "Web-GUI database management tool",
       "required": "Y"
     },
