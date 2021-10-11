@@ -61,16 +61,12 @@ sudo systemctl start docker
 
 #### Install Jitsi
 
-We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose-production.yml) by yourself
+We assume that you are already familiar with Docker, and you can modify [docker-compose file](docker-compose.yml) by yourself
 
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-jitsi
 cd docker-jitsi
-echo aaa  
-echo bbb  
-# .env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet  
-# The default startup is erpnext12. If you want to run erpnext13, you only need to change ERPNEXT_VERSION/FRAPPE_VERSIO to V13  
-docker-compose -f docker-compose-production.yml  --env-file  .env_all up -d
+docker-compose -f docker-compose.yml  --env-file  .env up -d
 ```
 
 ### FAQ
@@ -80,12 +76,6 @@ Yes, you should modify all database password and application password at docker-
 
 #### Docker runing failed for the reason that port conflict?
 You should modify ports at [docker-compose file](docker-compose-production.yml) and docker-compose again
-
-#### question1  
-answer1  
-
-#### question2  
-answer2  
 
 ### Usage instructions
 

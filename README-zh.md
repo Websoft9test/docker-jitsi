@@ -70,11 +70,7 @@ sudo systemctl start docker
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-jitsi
 cd docker-jitsi
-echo aaa  
-echo bbb  
-# .env文件的SITE_NAME需要修改成公网IP或者域名才能被外网访问  
-# 默认启动的是ERPNext12，如果您想运行ERPNext13,只需将ERPNEXT_VERSION、FRAPPE_VERSION修改成v13  
-sudo docker-compose -f docker-compose-production.yml --env-file .env_all up -d
+sudo docker-compose -f docker-compose.yml --env-file .env up -d
 ```
 
 ### 常见问题
@@ -85,14 +81,8 @@ sudo docker-compose -f docker-compose-production.yml --env-file .env_all up -d
 
 #### 端口冲突导致无法启动？
 
-修改 [docker-compose](docker-compose-production.yml) 文件中冲突的端口，然后再启动容器
+修改 [docker-compose](docker-compose.yml) 文件中冲突的端口，然后再启动容器
 
-
-#### 问题1  
-答案1  
-
-#### 问题2  
-答案2  
 
 ### 使用说明
 
